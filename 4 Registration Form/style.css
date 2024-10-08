@@ -1,0 +1,95 @@
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Heading styling */
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-collapse: collapse;
+}
+
+/* Table data styling */
+td {
+    padding: 12px;
+    vertical-align: middle;
+    text-align: left;
+}
+
+/* Label styling */
+label {
+    color: #555;
+    font-weight: bold;
+}
+
+/* Input field styling for text, email, password, select, textarea */
+input[type="text"], 
+input[type="email"], 
+input[type="password"], 
+select, 
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Radio and checkbox input styling */
+input[type="radio"], 
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Submit button hover effect */
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Error message styling */
+.error {
+    color: #ff0000;
+    font-size: 14px;
+}
+
+/* Table alignment */
+table {
+    text-align: center;
+}
+
+/* Bio textarea styling */
+textarea {
+    resize: vertical;
+}
+
+/* Adjust the alignment of the submit button */
+td[colspan="2"] {
+    text-align: center;
+}
