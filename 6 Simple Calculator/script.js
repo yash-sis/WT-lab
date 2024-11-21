@@ -2,60 +2,37 @@ let display = document.getElementById("display");
 let currentValue = "";
 let operation = "";
 let previousValue = "";
+let isResult = false;
 
 function appendToDisplay(value) {
-  currentValue += value;
+  if (isResult && !isNaN(value)) {
+    currentValue = value;
+    isResult = false;
+  } else {
+    currentValue += value;
+  }
   display.value = currentValue;
 }
 
 function clearDisplay() {
   currentValue = "";
-  operation = "";
-  previousValue = "";
   display.value = "";
+  isResult = false;
 }
 
 function setOperation(op) {
   if (currentValue !== "") {
-    if (previousValue !== "") {
-      calculate();
-    }
-    operation = op;
-    previousValue = currentValue;
-    currentValue = "";
+    if (isResult) isResult = false;
+    currentValue += ` ${op} `;
+    display.value = currentValue;
   }
 }
 
 function calculate() {
-  if (previousValue !== "" && currentValue !== "") {
-    let result;
-    const prev = parseFloat(previousValue);
-    const current = parseFloat(currentValue);
-    switch (operation) {
-      case "+":
-        result = prev + current;
-        break;
-      case "-":
-        result = prev - current;
-        break;
-      case "*":
-        result = prev * current;
-        break;
-      case "/":
-        result = prev / current;
-        break;
-      case "%":
-        result = prev % current;
-        break;
-      case "^":
-        result = Math.pow(prev, current);
-        break;
-    }
-    display.value = result;
-    previousValue = result.toString();
-    currentValue = "";
-    operation = "";
-  }
+  const result = eval(currentValue.replace("^", "**"));
+  display.value = result;
+  currentValue = result.toString();
+  isResult = true;
 }
 
 function squareRoot() {
@@ -63,6 +40,7 @@ function squareRoot() {
     const result = Math.sqrt(parseFloat(currentValue));
     display.value = result;
     currentValue = result.toString();
+    isResult = true;
   }
 }
 
@@ -71,5 +49,6 @@ function square() {
     const result = Math.pow(parseFloat(currentValue), 2);
     display.value = result;
     currentValue = result.toString();
+    isResult = true;
   }
 }
