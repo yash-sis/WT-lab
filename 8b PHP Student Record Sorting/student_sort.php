@@ -2,8 +2,8 @@
 // Database connection details
 $host = 'localhost';
 $dbname = 'student_records';
-$username = 'your_username';
-$password = 'your_password';
+$username = 'root';
+$password = '';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);

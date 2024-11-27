@@ -1,32 +1,37 @@
-$(document).ready(function() {
-    // a. Append content
-    $("#appendButton").click(function() {
-        $("#existingParagraph").append(" This content is appended.");
-        $("#existingList").append("<li>Appended item</li>");
-    });
+$(document).ready(function () {
+  //Append content
+  $("#appendButton").click(function () {
+    $("#existingParagraph").append(" This content is appended.");
+    $("#existingList").append("<li>Appended item</li>");
+  });
 
-    // b. Animate element
-    $("#animateButton").click(function() {
-        $("#animateBox").animate({
-            width: "200px",
-            height: "200px",
-            opacity: 0.5
-        }, 1000);
-    });
+  //Animate element
+  $("#animateButton").click(function () {
+    $("#animateBox").animate(
+      {
+        width: "200px",
+        height: "200px",
+      },
+      1000
+    );
+  });
 
-    // c. Animate and change color
-    $("#colorAnimateButton").click(function() {
-        $("#colorBox").animate({
-            width: "200px",
-            height: "200px"
-        }, {
-            duration: 1000,
-            step: function(now, fx) {
-                if (fx.prop === "width") {
-                    // Change color dynamically based on width
-                    $(this).css("background-color", `rgb(${Math.round(now)}, 52, 219)`);
-                }
-            }
-        });
-    });
+  //Animate and change color
+  $("#colorAnimateButton").click(function () {
+    $("#colorBox").animate(
+      {
+        width: "200px",
+        height: "200px",
+      },
+      {
+        duration: 1000,
+        step: function (now, fx) {
+          if (fx.prop === "width") {
+            // Change color dynamically based on width
+            $(this).css("background-color", `rgb(${Math.round(now)}, 52, 219)`);
+          }
+        },
+      }
+    );
+  });
 });
