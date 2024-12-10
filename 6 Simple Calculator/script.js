@@ -1,7 +1,6 @@
 let display = document.getElementById("display");
 let currentValue = "";
 let operation = "";
-let previousValue = "";
 let isResult = false;
 
 function appendToDisplay(value) {

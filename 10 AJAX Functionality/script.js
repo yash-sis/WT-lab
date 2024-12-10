@@ -2,9 +2,9 @@
 const simulatedData = {
   json: {
     text: "This is a sample text from a simulated server response.",
-    name: "John Doe",
+    name: "Aarav Sharma",
     age: 30,
-    city: "New York",
+    city: "Bengaluru",
   },
 };
 
@@ -39,7 +39,7 @@ function getJSONOperation() {
 
 //jQuery parseJSON() method
 function parseJSONExample() {
-  var jsonString = JSON.stringify(simulatedData.json);
-  var jsonObject = $.parseJSON(jsonString);
+  let jsonString = JSON.stringify(simulatedData.json);
+  let jsonObject = $.parseJSON(jsonString);
   $("#result-d").text(JSON.stringify(jsonObject, null, 2));
 }

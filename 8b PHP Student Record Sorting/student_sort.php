@@ -16,16 +16,16 @@ try {
     // Selection sort function
     function selectionSort(&$arr, $n) {
         for ($i = 0; $i < $n - 1; $i++) {
-            $min_idx = $i;
+            $min = $i;
             for ($j = $i + 1; $j < $n; $j++) {
-                if ($arr[$j]['gpa'] < $arr[$min_idx]['gpa']) {
-                    $min_idx = $j;
+                if ($arr[$j]['gpa'] < $arr[$min]['gpa']) {
+                    $min = $j;
                 }
             }
-            if ($min_idx != $i) {
+            if ($min != $i) {
                 $temp = $arr[$i];
-                $arr[$i] = $arr[$min_idx];
-                $arr[$min_idx] = $temp;
+                $arr[$i] = $arr[$min];
+                $arr[$min] = $temp;
             }
         }
     }
@@ -44,7 +44,6 @@ try {
         echo "</tr>";
     }
     echo "</table>";
-
 } catch(PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
 }
