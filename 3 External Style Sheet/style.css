@@ -1,37 +1,4 @@
-/* Element Selector */
-h2 {
-    color: #2c3e50;
-    font-family: 'Arial', sans-serif;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 10px;
-}
-
-/* Element Selector with Pseudo-class */
-h3:hover {
-    color: #e74c3c;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-/* Element Selector */
-hr {
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-}
-
-/* Element Selector with Attribute */
-p[lang] {
-    font-style: italic;
-}
-
-/* Class Selector */
-.highlight {
-    background-color: #f1c40f;
-    padding: 5px;
-}
-
-/* ID Selector */
+/* ID Selector for the main content */
 #main-content {
     max-width: 800px;
     margin: 0 auto;
@@ -39,38 +6,71 @@ p[lang] {
     background-color: #ecf0f1;
 }
 
-/* Descendant Selector */
-div p {
-    line-height: 1.6;
-    margin-bottom: 15px;
+/* Element Selector for <h2> */
+h2 {
+    color: #2c3e50;
+    font-family: 'Arial', sans-serif;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
 }
 
-/* Child Selector */
-div > span {
-    font-weight: bold;
-    color: #16a085;
-}
-
-/* Adjacent Sibling Selector */
+/* Adjacent Sibling Selector for <h2> + <p> */
 h2 + p {
     font-size: 1.1em;
     color: #7f8c8d;
 }
 
-/* Attribute Selector */
+/* Element Selector for <h3> with Pseudo-class */
+h3:hover {
+    color: #e74c3c;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Element Selector for <hr> */
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+/* Element Selector for <p> with Attribute */
+p[lang] {
+    font-style: italic;
+}
+
+/* Class Selector for .highlight */
+.highlight {
+    background-color: #f1c40f;
+    padding: 5px;
+}
+
+/* Descendant Selector for <div> <p> */
+div p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Child Selector for <div> > <span> */
+section > span {
+    font-weight: bold;
+    color: #16a085;
+}
+
+/* Element Selector for <time> with Attribute */
 time[datetime] {
     color: #8e44ad;
     font-weight: bold;
 }
 
-/* Pseudo-element Selector */
+/* Pseudo-element Selector for <p> */
 p::first-letter {
     font-size: 1.5em;
     font-weight: bold;
     color: #c0392b;
 }
 
-/* Multiple Selectors */
+/* Multiple Selectors for <img> and <a> */
 img, a {
     border: 1px solid #bdc3c7;
     padding: 5px;
@@ -93,8 +93,8 @@ img[alt] {
     height: auto;
 }
 
-/* Combining Selectors */
-div.special p {
+/* Combining Selectors for .special <p> */
+article.special p {
     text-indent: 20px;
     color: #27ae60;
 }
