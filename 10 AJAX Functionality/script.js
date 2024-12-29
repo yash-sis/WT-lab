@@ -11,7 +11,7 @@ const simulatedData = {
 //Ajax-like operation without jQuery
 function operationWithoutJQuery() {
   setTimeout(function () {
-    document.getElementById("result-a").textContent = simulatedData.json.text;
+    document.getElementById("result-a").innerText = simulatedData.json.text;
   }, 500);
 }
 
@@ -40,6 +40,6 @@ function getJSONOperation() {
 //jQuery parseJSON() method
 function parseJSONExample() {
   let jsonString = JSON.stringify(simulatedData.json);
-  let jsonObject = $.parseJSON(jsonString);
-  $("#result-d").text(JSON.stringify(jsonObject, null, 2));
+  let jsObject = $.parseJSON(jsonString);
+  $("#result-d").text(JSON.stringify(jsObject, null, 2));
 }

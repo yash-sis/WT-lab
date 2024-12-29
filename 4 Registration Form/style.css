@@ -75,12 +75,6 @@ input[type="submit"]:hover {
   background-color: #45a049;
 }
 
-/* Error message styling */
-.error {
-  color: #ff0000;
-  font-size: 14px;
-}
-
 /* Bio textarea styling */
 textarea {
   resize: vertical;
