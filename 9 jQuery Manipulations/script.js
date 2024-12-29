@@ -1,7 +1,7 @@
 $(document).ready(function () {
   //Append content
   $("#appendButton").click(function () {
-    $("#existingParagraph").append(" This content is appended.");
+    $("#existingParagraph").append("<p>This content is appended.</p>");
     $("#existingList").append("<li>Appended item</li>");
   });
 
